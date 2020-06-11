@@ -1,17 +1,17 @@
 {
   "name": "@0xc/serverless-offline-aws-sqs",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "AWS SQS 📤 Plugin for Serverless Framework ⚡️| Webpack support | Local ElasticMQ",
   "main": "src",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:tcarrio/serverless-offline-aws-sqs.git"
+    "url": "https://git.sr.ht/~tcarrio/serverless-offline-aws-sqs.git"
   },
   "bugs": {
-    "url": "https://github.com/tcarrio/serverless-offline-aws-sqs/issues"
+    "url": "https://todo.sr.ht/~tcarrio/serverless-offline-aws-sqs"
   },
-  "homepage": "https://github.com/tcarrio/serverless-offline-aws-sqs/tree/master#readme",
+  "homepage": "https://git.sr.ht/~tcarrio/serverless-offline-aws-sqs/tree/master/README.md",
   "files": [
     "src/index.js"
   ],
