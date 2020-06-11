@@ -1,6 +1,6 @@
 {
   "name": "@0xc/serverless-offline-aws-sqs",
-  "version": "1.2.3",
+  "version": "2.0.0",
   "description": "AWS SQS 📤 Plugin for Serverless Framework ⚡️| Webpack support | Local ElasticMQ",
   "main": "src",
   "private": false,
