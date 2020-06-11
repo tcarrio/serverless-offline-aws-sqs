@@ -1,0 +1,42 @@
+image: archlinux
+packages:
+  - nodejs
+  - npm
+  - jq
+sources:
+  - https://git.sr.ht/~tcarrio/serverless-offline-aws-sqs
+  - https://git.sr.ht/~tcarrio/build-helpers
+environment:
+  helpers_dir: build-helpers
+  project_dir: serverless-offline-aws-sqs
+secrets:
+  - ba28a958-f5f1-48d5-830f-abcbb5efb1a5
+tasks:
+  - install: |
+      cd $project_dir
+      npm ci
+  - build: |
+      cd $project_dir
+      if [ -f tsconfig.json ]
+      then
+        npm run build
+      fi
+  - test: |
+      cd $project_dir
+      npm run test
+  - deploy: |
+      source $helpers_dir/all.sh
+      cd $project_dir
+      if ! compare_branch master
+      then
+        echo "Skipping deploy task for non-master branch"
+        exit 0
+      fi
+
+      if ! unpublished_npm_version
+      then
+        echo "Skipping deployment -- version already exists"
+        exit 0
+      fi
+
+      npm publish --access public
