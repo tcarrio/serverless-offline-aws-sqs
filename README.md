@@ -1,3 +1,5 @@
+[![builds.sr.ht status](https://builds.sr.ht/~tcarrio/serverless-offline-aws-sqs/.build.yml.svg)](https://builds.sr.ht/~tcarrio/serverless-offline-aws-sqs/.build.yml?) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # serverless-offline-sqs
 
 This Serverless-offline plugin emulates AWS λ and SQS queue on your local machine by using ElasticMQ. To do so, it listens SQS queue and invokes your handlers.
